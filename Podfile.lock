@@ -1,0 +1,30 @@
+PODS:
+  - Apollo (0.9.5):
+    - Apollo/Core (= 0.9.5)
+  - Apollo/Core (0.9.5)
+  - Kingfisher (5.2.0)
+  - lottie-ios (2.5.2)
+  - SteviaLayout (4.4.3)
+
+DEPENDENCIES:
+  - Apollo
+  - Kingfisher (~> 5.0)
+  - lottie-ios
+  - SteviaLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Apollo
+    - Kingfisher
+    - lottie-ios
+    - SteviaLayout
+
+SPEC CHECKSUMS:
+  Apollo: 19caf3246d292bbb69ecad1bd098661f78222aba
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  SteviaLayout: ae5ee66101e03607a93c9b3773b84ab7ba7b3d17
+
+PODFILE CHECKSUM: 946bbd8d98ee1eca6184bb934bdcee97adf8f383
+
+COCOAPODS: 1.5.3
