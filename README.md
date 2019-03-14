@@ -47,5 +47,4 @@ $ pod install
 ## Demo
 
 ---
-
-![Recordit GIF](hhttp://g.recordit.co/wqF33Fg4VW.gif)
+![demo](http://g.recordit.co/wqF33Fg4VW.gif)
