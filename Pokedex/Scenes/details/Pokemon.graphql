@@ -1,0 +1,14 @@
+
+query Pokemon($name: String!) {
+    pokemon(name: $name) {
+        ...PokemonDetails,
+        evolutions {
+            ...PokemonDetails
+        }
+    }
+}
+
+
+fragment PokemonDetails on Pokemon {
+     id, number, name, image
+}

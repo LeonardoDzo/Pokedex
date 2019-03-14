@@ -18,6 +18,12 @@ class PokemonTableViewCell: UITableViewCell {
         lbl.numberOfLines = 0
         return lbl
     }()
+//    var classificationLbl: UILabel = {
+//        var lbl = UILabel()
+//        lbl.font = UIFont.preferredFont(forTextStyle: .headline)
+//        lbl.numberOfLines = 0
+//        return lbl
+//    }()
     var icon: UIImageView = {
         var img = UIImageView()
         let path = Bundle.main.path(forResource: "pokeballLoading", ofType: "gif")!
@@ -40,7 +46,7 @@ class PokemonTableViewCell: UITableViewCell {
         
         layout(
             >=16,
-            |-16-icon.size(60).centerVertically()-nameLbl-|,
+            |-icon.size(60).centerVertically()-nameLbl.centerVertically()-|,
             ""
         )
     }
@@ -49,6 +55,13 @@ class PokemonTableViewCell: UITableViewCell {
         nameLbl.text = pokemon?.name
         let processor = RoundCornerImageProcessor(cornerRadius: 20)
         icon.kf.setImage(with: URL(string: pokemon?.image ?? ""), options: [.transition(.fade(0.4)), .processor(processor)])
+        //classificationLbl.text = pokemon?.classification
+    }
+    
+    func bind(_ pokemon: PokemonQuery.Data.Pokemon.Evolution.Fragments) {
+        nameLbl.text = pokemon.pokemonDetails.name
+        let processor = RoundCornerImageProcessor(cornerRadius: 20)
+        icon.kf.setImage(with: URL(string: pokemon.pokemonDetails.image ?? ""), options: [.transition(.fade(0.4)), .processor(processor)])
     }
     
 }

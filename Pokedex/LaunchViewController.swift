@@ -15,7 +15,11 @@ class LaunchViewController: UIViewController {
             lotieView.animation = "launch"
             lotieView.play { (isDone) in
                 if isDone {
-                    self.present(PokemonsTableViewController(), animated: true, completion: nil)
+                    let pnc = UINavigationController(rootViewController: PokemonsTableViewController())
+                    let nb = pnc.navigationBar
+                    nb.barTintColor = #colorLiteral(red: 1, green: 0.2401054468, blue: 0.2534727312, alpha: 1)
+                    nb.titleTextAttributes = [.foregroundColor: UIColor.white]
+                    self.present(pnc, animated: true, completion: nil)
                 }
             }
         }
