@@ -27,7 +27,7 @@
 > Instalar Cocoapods
 
 ```shell
-$ sudo gem install 
+$ sudo gem install cocoapods 
 ```
 
 > Ahora instala los pods del proyecto
