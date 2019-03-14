@@ -5,7 +5,7 @@
 
 # Pokedex
 
-> Puedes visualizar pokemons y sus evoluciones con busquedas hechas con GraphQL.
+> Puedes visualizar pokemons y sus evoluciones con búsquedas hechas con GraphQL.
 
 
 **Contenido**
@@ -22,7 +22,7 @@
 
 ### Después
 
-- Una vez descargado es necesario ir al directorio donde esta el proyecto y efectuar el siguiente comando:
+- Una vez descargado, es necesario ir al directorio donde está el proyecto y efectuar el siguiente comando:
 
 > Instalar Cocoapods
 
