@@ -163,7 +163,7 @@ public final class PokemonQuery: GraphQLQuery {
 
 public final class PokemonsQuery: GraphQLQuery {
   public let operationDefinition =
-    "query Pokemons($first: Int!) {\n  pokemons(first: $first) {\n    __typename\n    id\n    number\n    name\n    image\n    classification\n  }\n}"
+    "query Pokemons($first: Int!) {\n  pokemons(first: $first) {\n    __typename\n    name\n    image\n  }\n}"
 
   public var first: Int
 
@@ -206,11 +206,8 @@ public final class PokemonsQuery: GraphQLQuery {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
-        GraphQLField("number", type: .scalar(String.self)),
         GraphQLField("name", type: .scalar(String.self)),
         GraphQLField("image", type: .scalar(String.self)),
-        GraphQLField("classification", type: .scalar(String.self)),
       ]
 
       public private(set) var resultMap: ResultMap
@@ -219,8 +216,8 @@ public final class PokemonsQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(id: GraphQLID, number: String? = nil, name: String? = nil, image: String? = nil, classification: String? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Pokemon", "id": id, "number": number, "name": name, "image": image, "classification": classification])
+      public init(name: String? = nil, image: String? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Pokemon", "name": name, "image": image])
       }
 
       public var __typename: String {
@@ -229,26 +226,6 @@ public final class PokemonsQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
-        }
-      }
-
-      /// The ID of an object
-      public var id: GraphQLID {
-        get {
-          return resultMap["id"]! as! GraphQLID
-        }
-        set {
-          resultMap.updateValue(newValue, forKey: "id")
-        }
-      }
-
-      /// The identifier of this Pokémon
-      public var number: String? {
-        get {
-          return resultMap["number"] as? String
-        }
-        set {
-          resultMap.updateValue(newValue, forKey: "number")
         }
       }
 
@@ -268,16 +245,6 @@ public final class PokemonsQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "image")
-        }
-      }
-
-      /// The classification of this Pokémon
-      public var classification: String? {
-        get {
-          return resultMap["classification"] as? String
-        }
-        set {
-          resultMap.updateValue(newValue, forKey: "classification")
         }
       }
     }

@@ -28,6 +28,7 @@ class PokemonTableViewCell: UITableViewCell {
         var img = UIImageView()
         let path = Bundle.main.path(forResource: "pokeballLoading", ofType: "gif")!
         let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        img.contentMode = .scaleAspectFit
         img.kf.indicatorType = .image(imageData: data)
         return img
     }()

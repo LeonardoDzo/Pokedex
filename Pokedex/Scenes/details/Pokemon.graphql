@@ -8,7 +8,6 @@ query Pokemon($name: String!) {
     }
 }
 
-
 fragment PokemonDetails on Pokemon {
      id, number, name, image
 }
