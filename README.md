@@ -20,7 +20,7 @@
 
 - Clona este repo `https://github.com/LeonardoDzo/Pokedex.git`
 
-### Despues
+### Después
 
 - Una vez descargado es necesario ir al directorio donde esta el proyecto y efectuar el siguiente comando:
 
